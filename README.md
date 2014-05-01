@@ -36,7 +36,10 @@ http://www.cqc.org.uk/sites/default/files/media/documents/05_mar_2014_cqc_direct
 
 ## Key Indicators
 
-### SHMI - standardized hospital mortality index
+### SHMI - summary hospital mortality index
+
+SHMI == Observerd Deaths / Expected Deaths
+
 
 Its a real odyssey to find the data - see below. Here's a the latest CSV data:
 
@@ -75,7 +78,16 @@ Really quite difficult to track down the data.
 
   And thankfully the data itself has a nice URL: https://indicators.ic.nhs.uk/download/SHMI/January_2014/Data/SHMI.csv
 
-### Misc
+### HES 
+
+HES is the linked data warehouse of what happens to people in hospitals including:
+
+* clinical information about diagnoses and operations
+* information about the patient, such as age group, gender and ethnicity
+* administrative information, such as time waited, and dates and methods of admission and discharge
+* geographical information such as where patients are treated and the area where they live.
+
+A subset of this information is released as open data - mostly monthly summaries. 
 
 http://www.hscic.gov.uk/article/2677/Linked-HES-ONS-mortality-data
 
@@ -84,3 +96,4 @@ Using the linked HES-ONS mortality data, deaths both in and outside hospital fol
 xls icon 3 Character Procedure & Diagnosis tables XLS [2Mb]
 
 http://www.hscic.gov.uk/media/11669/3characterprocedurediagnosistables/xls/3_character_procedure_diagnosis_tables_V3_050613.xls
+
