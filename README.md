@@ -91,6 +91,24 @@ A subset of this information is released as open data - mostly monthly summaries
 
 http://www.hscic.gov.uk/article/2677/Linked-HES-ONS-mortality-data
 
+### FROM NHS Hack Day
+ (http://nhshackday.com/tools/datasets/)
+ 
+*  QOF datasets: http://www.gpcontract.co.uk
+* Datasets used to make CMO annual report on the nation's health for 2011: http://www.dh.gov.uk/health/2012/11/cmo-data
+* NHS Atlas of Variation (see http://www.rightcare.nhs.uk/index.php/nhs-atlas/ for more information and to view maps etc): http://wiki.nhshackday.com/wiki/DatasetsAndAPIs?action=AttachFile&do=get&target=AtlasOfVariation2011.xls
+* Marmot indicators for local authorities in England 2012 -- maps: http://www.lho.org.uk/LHO_Topics/National_Lead_Areas/Marmot/Maps/Single/atlas.html
+* Marmot indicators for local authorities in England 2012 -- data: http://www.lho.org.uk/viewResource.aspx?id=17034
+* Kasabi NHS datasets (complete list at https://docs.google.com/spreadsheet/ccc?key=0AiswT8ko8hb4dFhvcFBtangydmo0bmJ5NnMxT2dVWnc#gid=0): http://blog.kasabi.com/?s=nhs
+* ScraperWiki: https://scraperwiki.com/tags/NHS
+care): http://indicators.ic.nhs.uk
+* CfH -- major classification schemes for disease and intervention (more for bean counting than clinicians or patients: http://www.connectingforhealth.nhs.uk/systemsandservices/data/clinicalcoding
+* NHS Data Hub: http://datahub.io/group/nhs
+* NHS Choices -- limited range of datasets (apply to http://www.nhs.uk/aboutNHSChoices/professionals/syndication/Pages/Webservices.aspx for API): http://www.nhs.uk/aboutNHSChoices/professionals/developments/Pages/NHSChoicesdatasets.aspx
+* Government economic costing for various sectors, including healthcare, for example cost per GP visit: http://data.gov.uk/sib_knowledge_box/toolkit
+
+### MISC
+
 Using the linked HES-ONS mortality data, deaths both in and outside hospital following hospital admission or primary procedure have been calculated. Detailed data on aggregated counts of deaths within 30, 60 and 90 days by primary procedure and primary diagnosis is available for HES data years 2007-08, 2008-09 and 2009-10:
 
 xls icon 3 Character Procedure & Diagnosis tables XLS [2Mb]
