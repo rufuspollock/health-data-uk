@@ -38,20 +38,47 @@ http://www.cqc.org.uk/sites/default/files/media/documents/05_mar_2014_cqc_direct
 
 ### SHMI - summary hospital mortality index
 
-SHMI == Observerd Deaths / Expected Deaths
+SHMI == Observed Deaths / Expected Deaths
 
+Here's a the latest CSV data (it was a real odyssey to find this data - see
+below for more on this):
 
-Its a real odyssey to find the data - see below. Here's a the latest CSV data:
+<https://indicators.ic.nhs.uk/download/SHMI/January_2014/Data/SHMI.csv>
 
-https://indicators.ic.nhs.uk/download/SHMI/January_2014/Data/SHMI.csv
+Data is released quarterly and is stored following expected structure e.g.
+October 2013 file is at:
 
-Here's a previous quarter release to get a sense of how data gets named.
+<https://indicators.ic.nhs.uk/download/SHMI/October_2013/Data/SHMI.csv>
 
-https://indicators.ic.nhs.uk/download/SHMI/October_2013/Data/SHMI.csv
+The first file is from October 2011 and we have **archived a copy of all of the
+data files in the `archive` folder of this data package**.
 
-Here's the data definition file
+Here's the key field definitions from the [data definition file (xls)][shmi-def]:
 
-https://indicators.ic.nhs.uk/download/SHMI/January_2014/Data/SHMI_FILE_DEFINITION.xls
+[shmi-def]: https://indicators.ic.nhs.uk/download/SHMI/January_2014/Data/SHMI_FILE_DEFINITION.xls
+
+    Column Name     Brief Description
+    INDICATOR_CODE  Indicator code
+    PROVIDER        3 character provider/trust code
+    PROVIDER NAME   Provider/Trust name
+    DENOMINATOR     The total number of finished provider spells
+    OBSERVED        The total number of observed deaths
+    EXPECTED        The estimated total number of expected deaths
+    VALUE           The SHMI value defined as OBSERVED divided by EXPECTED
+    PO_LL           The 99.8% lower control limit derived from an exact Poisson
+                    distribution
+    PO_UL           The 99.8% upper control limit derived from an exact Poisson
+                    distribution
+    OD_LL           The 95% lower control limit derived from a random effects model
+                    applying a 10% trim for over dispersion
+    OD_UL           The 95% upper control limit derived from a random effects model
+                    applying a 10% trim for over dispersion
+    OD_BANDING      "Banding number using the 95% control limit derived from a
+                    random effects model applying a 10% trim for over dispersion with:
+                    1 - Higher than expected
+                    2 - As expected
+                    3 - Lower than expected"
+
 
 #### Data Complaints
 
