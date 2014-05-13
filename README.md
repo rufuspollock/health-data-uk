@@ -1,10 +1,8 @@
 UK Health Data. Research on what's available and what you can do with it.
 
-# What's out there
+# Data Sources
 
-## Sources
-
-### Health and Social Care Information Center
+## Health and Social Care Information Center
 
 http://www.hscic.gov.uk/
 
@@ -25,8 +23,7 @@ http://www.hscic.gov.uk/searchcatalogue?productid=14111 actually have no data
 (just PDFs) and link you to the indicator portal (though not to the actual
 relevant dataset!)
 
-
-### Care Quality Commission
+## Care Quality Commission
 
 http://www.cqc.org.uk/cqcdata
 
@@ -34,11 +31,12 @@ Only data AFAICT is CQC care directory which is just a list of care providers.
 
 http://www.cqc.org.uk/sites/default/files/media/documents/05_mar_2014_cqc_directory.csv_.csv
 
-## Key Indicators
+# Key Indicators
 
-### SHMI - summary hospital mortality index
+## SHMI - summary hospital mortality index
 
 SHMI == Observed Deaths / Expected Deaths
+
 
 Here's a the latest CSV data (it was a real odyssey to find this data - see
 below for more on this):
@@ -79,8 +77,34 @@ Here's the key field definitions from the [data definition file (xls)][shmi-def]
                     2 - As expected
                     3 - Lower than expected"
 
+Note 2011 data only has a heading called `PO_BANDING` which one would assume is
+same as `OD_BANDING` but using the PO (poisson) model. We've removed this in
+consolidated data available in only one file.
 
-#### Data Complaints
+Note the INDICATOR_CODE is always I00699 for SHMI and so is omitted from the
+consolidate data we provide.
+
+### Preparation
+
+Run the python script:
+
+    python scripts/process.py
+
+### Licensing
+
+SHMI CSV files from 2013 onwards (but not before) have inserted at end of file
+(breaking the data structure!):
+
+> "Copyright © 2013, Health and Social Care Information Centre. All Rights Reserved"
+
+Not even clear if there are any rights in this data to license (given size).
+Plus one would assume it is openly licensed (it is listed on data.gov.uk). As
+such raw data I presume is either Public Domain or OGL. Any new rights in
+derived data in (`data`) is PDDL licensed.
+
+### Data Complaints
+
+#### Finding the Data
 
 Really quite difficult to track down the data.
 
@@ -105,7 +129,12 @@ Really quite difficult to track down the data.
 
   And thankfully the data itself has a nice URL: https://indicators.ic.nhs.uk/download/SHMI/January_2014/Data/SHMI.csv
 
-### HES 
+#### Data Structure
+
+* Addition of "copyright" row to some of the data files which has to be removed for processing
+* Fact that `PO_BANDING` heading appears in 2011 data but no other files
+
+## HES 
 
 HES is the linked data warehouse of what happens to people in hospitals including:
 
@@ -118,10 +147,11 @@ A subset of this information is released as open data - mostly monthly summaries
 
 http://www.hscic.gov.uk/article/2677/Linked-HES-ONS-mortality-data
 
-### FROM NHS Hack Day
- (http://nhshackday.com/tools/datasets/)
+## FROM NHS Hack Day
+
+From http://nhshackday.com/tools/datasets/
  
-*  QOF datasets: http://www.gpcontract.co.uk
+* QOF datasets: http://www.gpcontract.co.uk
 * Datasets used to make CMO annual report on the nation's health for 2011: http://www.dh.gov.uk/health/2012/11/cmo-data
 * NHS Atlas of Variation (see http://www.rightcare.nhs.uk/index.php/nhs-atlas/ for more information and to view maps etc): http://wiki.nhshackday.com/wiki/DatasetsAndAPIs?action=AttachFile&do=get&target=AtlasOfVariation2011.xls
 * Marmot indicators for local authorities in England 2012 -- maps: http://www.lho.org.uk/LHO_Topics/National_Lead_Areas/Marmot/Maps/Single/atlas.html
@@ -134,7 +164,7 @@ care): http://indicators.ic.nhs.uk
 * NHS Choices -- limited range of datasets (apply to http://www.nhs.uk/aboutNHSChoices/professionals/syndication/Pages/Webservices.aspx for API): http://www.nhs.uk/aboutNHSChoices/professionals/developments/Pages/NHSChoicesdatasets.aspx
 * Government economic costing for various sectors, including healthcare, for example cost per GP visit: http://data.gov.uk/sib_knowledge_box/toolkit
 
-### MISC
+## MISC
 
 Using the linked HES-ONS mortality data, deaths both in and outside hospital following hospital admission or primary procedure have been calculated. Detailed data on aggregated counts of deaths within 30, 60 and 90 days by primary procedure and primary diagnosis is available for HES data years 2007-08, 2008-09 and 2009-10:
 
