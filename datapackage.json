@@ -1,0 +1,84 @@
+{
+  "name": "health-data-uk",
+  "title": "Data Packaged UK Health Data",
+  "version": "0.1.0",
+  "license": "PDDL-1.0",
+  "repository": "git://github.com/rgrp/health-data-uk.git",
+  "sources": [{
+    "name": "Health and Social Care Information Center",
+    "web": "http://indicators.ic.nhs.uk/webview/index.jsp?catalog=http%3A%2F%2Fhg-l-app-472.ic.green.net%3A80%2Fobj%2FfCatalog%2FCatalog21&submode=catalog&mode=documentation&top=yes"
+  }],
+  "resources": [
+    {
+      "name": "shmi",
+      "path": "data/shmi.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 134000,
+      "schema": {
+        "fields": [
+          {
+            "name": "DATE",
+            "type": "date",
+            "description": ""
+          },
+          {
+            "name": "PROVIDER",
+            "type": "string",
+            "description": "3 character provider/trust code"
+          },
+          {
+            "name": "PROVIDER NAME",
+            "type": "number",
+            "description": "Provider/Trust name"
+          },
+          {
+            "name": "DENOMINATOR",
+            "type": "integer",
+            "description": "The total number of finished provider spells"
+          },
+          {
+            "name": "OBSERVED",
+            "type": "integer",
+            "description": "The total number of observed deaths"
+          },
+          {
+            "name": "EXPECTED",
+            "type": "number",
+            "description": "The estimated total number of expected deaths"
+          },
+          {
+            "name": "VALUE",
+            "type": "number",
+            "description": "The SHMI value defined as OBSERVED divided by EXPECTED"
+          },
+          {
+            "name": "PO_LL",
+            "type": "number",
+            "description": "The 99.8% lower control limit derived from an exact Poisson distribution"
+          },
+          {
+            "name": "PO_UL",
+            "type": "number",
+            "description": "The 99.8% upper control limit derived from an exact Poisson distribution"
+          },
+          {
+            "name": "OD_LL",
+            "type": "number",
+            "description": "The 95% lower control limit derived from a random effects model applying a 10% trim for over dispersion"
+          },
+          {
+            "name": "OD_UL",
+            "type": "number",
+            "description": "The 95% upper control limit derived from a random effects model applying a 10% trim for over dispersion"
+          },
+          {
+            "name": "OD_BANDING",
+            "type": "integer",
+            "description": "Banding number using the 95% control limit derived from a random effects model applying a 10% trim for over dispersion with:\n1 - Higher than expected\n2 - As expected\n3 - Lower than expected"
+          }
+        ]
+      }
+    }
+  ]
+}

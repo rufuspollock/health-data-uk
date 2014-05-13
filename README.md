@@ -71,11 +71,11 @@ Here's the key field definitions from the [data definition file (xls)][shmi-def]
                     applying a 10% trim for over dispersion
     OD_UL           The 95% upper control limit derived from a random effects model
                     applying a 10% trim for over dispersion
-    OD_BANDING      "Banding number using the 95% control limit derived from a
+    OD_BANDING      Banding number using the 95% control limit derived from a
                     random effects model applying a 10% trim for over dispersion with:
                     1 - Higher than expected
                     2 - As expected
-                    3 - Lower than expected"
+                    3 - Lower than expected
 
 Note 2011 data only has a heading called `PO_BANDING` which one would assume is
 same as `OD_BANDING` but using the PO (poisson) model. We've removed this in
